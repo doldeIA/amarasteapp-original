@@ -1,0 +1,45 @@
+# Node / npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+.vite/
+
+# Env files (do NOT commit secrets)
+.env
+.env.local
+.env.*.local
+.env.production
+.env.*.production
+
+# IDEs, OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# logs
+logs/
+*.log
+
+# lockfiles (keep only one if you use it)
+package-lock.json
+yarn.lock
+.pnpm-lock.yaml
+
+# archives
+*.zip
+
+# Mac/Win temporary files
+*.swp
+*.swo
+
+# coverage
+coverage/
+
+# local files
+*.localrc
