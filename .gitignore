@@ -13,33 +13,17 @@ build/
 .env
 .env.local
 .env.*.local
-.env.production
-.env.*.production
 
-# IDEs, OS
+# Lock files (keep only one if needed)
+package-lock.json
+yarn.lock
+.pnpm-lock.yaml
+
+# OS / IDE
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
 
-# logs
-logs/
-*.log
-
-# lockfiles (keep only one if you use it)
-package-lock.json
-yarn.lock
-.pnpm-lock.yaml
-
 # archives
 *.zip
-
-# Mac/Win temporary files
-*.swp
-*.swo
-
-# coverage
-coverage/
-
-# local files
-*.localrc
