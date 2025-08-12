@@ -2,56 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Fundo principal */
-body {
-  background-color: #A13500; /* --color-primary */
+/* ---------- Variáveis de cor ---------- */
+:root {
+  --color-primary: #A13500;
+  --color-accent: #E41B17;
+  --color-green: #00ff00;
 }
 
-/* Animações e classes personalizadas */
+/* ---------- Fundo padrão ---------- */
+body {
+  @apply text-white font-sans;
+  background-color: var(--color-primary);
+}
 
-/* Neon branco pulsante */
+/* ---------- Neon branco pulsante ---------- */
 @keyframes neonPulse {
   0%, 100% {
-    box-shadow: 0 0 8px rgba(255, 255, 255, 1), 0 0 16px rgba(255, 255, 255, 0.8), 0 0 24px rgba(255, 255, 255, 0.6);
+    box-shadow:
+      0 0 8px rgba(255, 255, 255, 1),
+      0 0 16px rgba(255, 255, 255, 0.8),
+      0 0 24px rgba(255, 255, 255, 0.6);
   }
   50% {
-    box-shadow: 0 0 4px rgba(255, 255, 255, 0.7), 0 0 8px rgba(255, 255, 255, 0.5);
+    box-shadow:
+      0 0 4px rgba(255, 255, 255, 0.7),
+      0 0 8px rgba(255, 255, 255, 0.5);
   }
 }
 .neon-pulse {
   animation: neonPulse 0.4s infinite ease-in-out;
 }
 
-/* Neon vermelho piscante */
+/* ---------- Neon vermelho piscante ---------- */
 @keyframes neonBlinkRed {
   0%, 100% {
-    filter: drop-shadow(0 0 0.5px rgba(228, 27, 23, 0.8)) drop-shadow(0 0 1px rgba(228, 27, 23, 0.6));
+    filter:
+      drop-shadow(0 0 0.5px rgba(228, 27, 23, 0.8))
+      drop-shadow(0 0 1px rgba(228, 27, 23, 0.6));
   }
   50% {
-    filter: drop-shadow(0 0 0.25px rgba(228, 27, 23, 0.6)) drop-shadow(0 0 0.5px rgba(228, 27, 23, 0.4));
+    filter:
+      drop-shadow(0 0 0.25px rgba(228, 27, 23, 0.6))
+      drop-shadow(0 0 0.5px rgba(228, 27, 23, 0.4));
   }
 }
 .neon-blink-red {
   animation: neonBlinkRed 0.8s infinite;
 }
 
-/* Botão verde pulsante */
+/* ---------- Botão verde pulsante ---------- */
 @keyframes neon-green-pulse {
   0%, 100% {
-    box-shadow: 0 0 8px #00ff00;
-    text-shadow: 0 0 4px #ffffff;
+    box-shadow: 0 0 8px var(--color-green);
+    text-shadow: 0 0 4px #fff;
   }
   50% {
-    box-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00;
-    text-shadow: 0 0 8px #ffffff, 0 0 12px #00ff00;
+    box-shadow:
+      0 0 20px var(--color-green),
+      0 0 30px var(--color-green);
+    text-shadow:
+      0 0 8px #fff,
+      0 0 12px var(--color-green);
   }
 }
 .downloads-button-glow {
-  border: 2px solid #00ff00;
+  border: 2px solid var(--color-green);
   animation: neon-green-pulse 1s infinite ease-in-out;
 }
 
-/* Efeito de aparecimento */
+/* ---------- Efeito de aparecimento ---------- */
 @keyframes swoopIn {
   from {
     opacity: 0;
@@ -66,7 +85,7 @@ body {
   animation: swoopIn 0.3s ease-out forwards;
 }
 
-/* Fade-in */
+/* ---------- Fade-in ---------- */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -75,7 +94,7 @@ body {
   animation: fadeIn 0.5s ease-out forwards;
 }
 
-/* Gradiente animado */
+/* ---------- Gradiente animado ---------- */
 @keyframes animated-gradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -86,27 +105,33 @@ body {
   animation: animated-gradient 10s ease infinite;
 }
 
-/* Botão piscando em vermelho */
+/* ---------- Botão piscando em vermelho ---------- */
 @keyframes blink-red-button {
   0%, 100% {
-    background-color: #E41B17;
-    box-shadow: 0 0 5px rgba(228, 27, 23, 0.7), 0 0 10px rgba(228, 27, 23, 0.5);
+    background-color: var(--color-accent);
+    box-shadow:
+      0 0 5px rgba(228, 27, 23, 0.7),
+      0 0 10px rgba(228, 27, 23, 0.5);
   }
   50% {
     background-color: #ff4d4d;
-    box-shadow: 0 0 10px rgba(228, 27, 23, 1), 0 0 20px rgba(228, 27, 23, 0.7);
+    box-shadow:
+      0 0 10px rgba(228, 27, 23, 1),
+      0 0 20px rgba(228, 27, 23, 0.7);
   }
 }
 .blinking-stop-button {
   animation: blink-red-button 1.2s infinite ease-in-out;
 }
 
-/* Texto neon branco */
+/* ---------- Texto neon branco ---------- */
 .neon-white-text-glow {
-  text-shadow: 0 0 6px rgba(255, 255, 255, 1), 0 0 12px rgba(255, 255, 255, 0.7);
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 1),
+    0 0 12px rgba(255, 255, 255, 0.7);
 }
 
-/* Scrollbars customizados */
+/* ---------- Scrollbars customizados ---------- */
 .custom-scrollbar::-webkit-scrollbar {
   width: 8px;
   height: 8px;

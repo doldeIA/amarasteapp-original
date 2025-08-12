@@ -1,10 +1,17 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App';
-import './index.css';
+// src/main.tsx
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css"; // Carrega Tailwind + estilos personalizados
 
-const rootEl = document.getElementById('root');
-if (!rootEl) {
-  throw new Error('Root element not found');
+// Garantir que o elemento root existe
+const rootElement = document.getElementById("root");
+if (!rootElement) {
+  throw new Error("Elemento #root não encontrado no index.html");
 }
-createRoot(rootEl).render(<App />);
+
+ReactDOM.createRoot(rootElement).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
