@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Artist Showcase</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Amarasté App</title>
 
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CDN quick config (keeps visual similar ao protótipo) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             backgroundImage: {
-              'red-white-stripes':
-                'repeating-linear-gradient(90deg, #c90000, #c90000 10px, #ffffff 10px, #ffffff 20px)',
+              'red-white-stripes': 'repeating-linear-gradient(90deg, #c90000, #c90000 10px, #ffffff 10px, #ffffff 20px)'
             },
             colors: {
               primary: '#A13500',
@@ -27,78 +26,29 @@
               'crimson-red': '#B22222',
               'soft-beige': '#fdf6ec',
               'neon-fuchsia': '#e400ff',
-              gold: '#D4AF37',
-            },
-          },
-        },
+              'gold': '#D4AF37'
+            }
+          }
+        }
       };
     </script>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Outfit:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet"
-    >
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Outfit:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
-    <!-- React-PDF Styles -->
-    <link
-      rel="stylesheet"
-      href="https://esm.sh/react-pdf@^8.0.0/dist/esm/Page/AnnotationLayer.css"
-    />
+    <!-- Favicon (coloque /public/favicon.ico se tiver) -->
+    <link rel="icon" href="/favicon.ico" />
 
-    <!-- Custom CSS animations -->
-    <style>
-      /* (Mantive 100% do CSS que você já tinha) */
-      body {
-        background-color: #A13500;
-      }
-
-      @keyframes neonPulse {
-        0%, 100% {
-          box-shadow: 0 0 8px rgba(255, 255, 255, 1),
-                      0 0 16px rgba(255, 255, 255, 0.8),
-                      0 0 24px rgba(255, 255, 255, 0.6);
-        }
-        50% {
-          box-shadow: 0 0 4px rgba(255, 255, 255, 0.7),
-                      0 0 8px rgba(255, 255, 255, 0.5);
-        }
-      }
-      .neon-pulse { animation: neonPulse 0.4s infinite ease-in-out; }
-
-      /* TODO: Todas as outras @keyframes e classes que você tinha
-         continuam exatamente como no seu arquivo original.
-         (Eu preservei todas para não quebrar o visual.)
-      */
-
-      /* Scrollbar, botões, animações, efeitos de texto, etc. */
-      /* ... [todo o CSS original que você postou acima permanece] ... */
-    </style>
-
-    <!-- Importmap (mantido para compatibilidade) -->
-    <script type="importmap">
-    {
-      "imports": {
-        "react": "https://esm.sh/react@^19.1.0",
-        "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
-        "react/": "https://esm.sh/react@^19.1.0/",
-        "react-pdf": "https://esm.sh/react-pdf@^8.0.0",
-        "react-pdf/": "https://esm.sh/react-pdf@^8.0.0/",
-        "@google/genai": "https://esm.sh/@google/genai"
-      }
-    }
-    </script>
-
-    <!-- Estilos globais do projeto -->
-    <link rel="stylesheet" href="/index.css">
+    <!-- NOTE: All app CSS should be imported by src/main.tsx (via `import './index.css'`) -->
+    <!-- Do NOT keep large <style> blocks here — move them to src/index.css -->
   </head>
 
-  <body>
+  <body class="bg-[var(--tw-color-primary,#A13500)] text-white min-h-screen">
     <div id="root"></div>
 
-    <!-- Alterado: agora aponta para src/main.tsx (Vite) -->
+    <!-- Vite entry -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
