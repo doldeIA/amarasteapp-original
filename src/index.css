@@ -1,0 +1,7 @@
+/* minimal css used by the app */
+:root{
+  --color-primary: #A13500;
+}
+html,body,#root { height: 100%; margin:0; padding:0; }
+body { font-family: 'Outfit', system-ui, -apple-system, "Segoe UI", Roboto, Arial; background: var(--color-primary); color: #fff; }
+.object-pdf-wrapper { background: #fff; color: #000; height: 80vh; }
