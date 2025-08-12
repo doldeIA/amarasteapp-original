@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}", // Inclui todos os arquivos React/Vite
+    "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {
@@ -22,8 +22,13 @@ module.exports = {
         'soft-beige': '#fdf6ec',
         'neon-fuchsia': '#e400ff',
         'gold': '#D4AF37',
+      },
+      fontFamily: {
+        barlow: ['"Barlow Condensed"', 'sans-serif'],
+        outfit: ['"Outfit"', 'sans-serif'],
+        playfair: ['"Playfair Display"', 'serif'],
       }
     }
   },
-  plugins: [],
+  plugins: []
 };
