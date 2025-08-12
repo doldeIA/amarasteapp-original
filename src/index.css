@@ -1,7 +1,63 @@
-/* minimal css used by the app */
-:root{
-  --color-primary: #A13500;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================================
+   Estilos customizados originais
+   ================================ */
+body {
+  background-color: #A13500; /* --color-primary */
 }
-html,body,#root { height: 100%; margin:0; padding:0; }
-body { font-family: 'Outfit', system-ui, -apple-system, "Segoe UI", Roboto, Arial; background: var(--color-primary); color: #fff; }
-.object-pdf-wrapper { background: #fff; color: #000; height: 80vh; }
+
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 1), 0 0 16px rgba(255, 255, 255, 0.8), 0 0 24px rgba(255, 255, 255, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.7), 0 0 8px rgba(255, 255, 255, 0.5);
+  }
+}
+.neon-pulse {
+  animation: neonPulse 0.4s infinite ease-in-out;
+}
+
+@keyframes neonBlinkRed {
+  0%, 100% {
+    filter: drop-shadow(0 0 0.5px rgba(228, 27, 23, 0.8)) drop-shadow(0 0 1px rgba(228, 27, 23, 0.6));
+  }
+  50% {
+    filter: drop-shadow(0 0 0.25px rgba(228, 27, 23, 0.6)) drop-shadow(0 0 0.5px rgba(228, 27, 23, 0.4));
+  }
+}
+.neon-blink-red {
+  animation: neonBlinkRed 0.8s infinite;
+}
+
+@keyframes chatPulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 8px #ffffffaa, 0 0 12px #ffffff88;
+  }
+  50% {
+    box-shadow: 0 0 12px #ffffff, 0 0 18px #ffffffdd;
+  }
+}
+.chat-pulse-glow {
+  animation: chatPulseGlow 1.5s infinite ease-in-out;
+}
+
+@keyframes neon-green-pulse {
+  0%, 100% {
+    box-shadow: 0 0 8px #00ff00;
+    text-shadow: 0 0 4px #ffffff;
+  }
+  50% {
+    box-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00;
+    text-shadow: 0 0 8px #ffffff, 0 0 12px #00ff00;
+  }
+}
+.downloads-button-glow {
+  border: 2px solid #00ff00;
+  animation: neon-green-pulse 1s infinite ease-in-out;
+}
+
+/* Aqui você pode continuar colando todos os @keyframes e classes personalizadas que estavam no seu <style> do index.html */
