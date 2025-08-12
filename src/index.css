@@ -2,19 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ================================
-   Estilos customizados originais
-   ================================ */
+/* ====================================
+   🎨 Estilos customizados originais
+   ==================================== */
 body {
-  background-color: #A13500; /* --color-primary */
+  background-color: #A13500; /* Cor primária */
 }
 
+/* ====== Botões e animações ====== */
 @keyframes neonPulse {
   0%, 100% {
-    box-shadow: 0 0 8px rgba(255, 255, 255, 1), 0 0 16px rgba(255, 255, 255, 0.8), 0 0 24px rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 1),
+                0 0 16px rgba(255, 255, 255, 0.8),
+                0 0 24px rgba(255, 255, 255, 0.6);
   }
   50% {
-    box-shadow: 0 0 4px rgba(255, 255, 255, 0.7), 0 0 8px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.7),
+                0 0 8px rgba(255, 255, 255, 0.5);
   }
 }
 .neon-pulse {
@@ -23,10 +27,12 @@ body {
 
 @keyframes neonBlinkRed {
   0%, 100% {
-    filter: drop-shadow(0 0 0.5px rgba(228, 27, 23, 0.8)) drop-shadow(0 0 1px rgba(228, 27, 23, 0.6));
+    filter: drop-shadow(0 0 0.5px rgba(228, 27, 23, 0.8))
+            drop-shadow(0 0 1px rgba(228, 27, 23, 0.6));
   }
   50% {
-    filter: drop-shadow(0 0 0.25px rgba(228, 27, 23, 0.6)) drop-shadow(0 0 0.5px rgba(228, 27, 23, 0.4));
+    filter: drop-shadow(0 0 0.25px rgba(228, 27, 23, 0.6))
+            drop-shadow(0 0 0.5px rgba(228, 27, 23, 0.4));
   }
 }
 .neon-blink-red {
@@ -60,4 +66,27 @@ body {
   animation: neon-green-pulse 1s infinite ease-in-out;
 }
 
-/* Aqui você pode continuar colando todos os @keyframes e classes personalizadas que estavam no seu <style> do index.html */
+/* ====== Elementos decorativos ====== */
+.logo-glow {
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8))
+          drop-shadow(0 0 12px rgba(255, 255, 255, 0.6));
+}
+
+.header-gradient {
+  background: linear-gradient(90deg, #A13500, #E41B17);
+}
+
+/* ====== Cards e caixas ====== */
+.card-glass {
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ====== Responsividade extra ====== */
+@media (max-width: 768px) {
+  .mobile-center {
+    text-align: center;
+  }
+}
